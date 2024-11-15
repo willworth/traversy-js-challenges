@@ -1,22 +1,10 @@
-function isPalindrome(word) {
-
-  // strip special characters
-  word = word.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-
-let reversedWord = word.split('').reverse().join('');
-if (word === reversedWord) {
-  return true;
+function isPalindrome(str) {
+  // Remove all non-alphanumeric characters and convert the string to lowercase
+  const formattedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  // Reverse the string
+  const reversedStr = formattedStr.split('').reverse().join('');
+  // Return whether the formatted string is equal to the reversed string
+  return formattedStr === reversedStr;
 }
 
 module.exports = isPalindrome;
-
-
-
-// ```js
-// function isPalindrome(str) {
-//   const formattedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-//   const reversedStr = formattedStr.split('').reverse().join('');
-//   return formattedStr === reversedStr;
-// }
-// ```
-
